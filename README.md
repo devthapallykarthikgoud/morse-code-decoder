@@ -1,5 +1,9 @@
 # Morse Code Decoder — Streamlit App
 
+<p align="center">
+  👉 <a href="https://morsecode-decoder.streamlit.app/" target="_blank"><b>🌐 Live Demo: Morse Code Decoder</b></a> 👈
+</p>
+
 📡 A modern, advanced **Morse Code Encoder & Decoder** built with [Streamlit](https://streamlit.io/). This project converts **Text ↔ Morse Code**, plays audio beeps, and provides export options with a beautiful UI.
 
 ---
