@@ -152,13 +152,13 @@ with left:
     with provide_examples:
         if st.button('Hello World (Text)'):
             input_area = 'Hello World'
-            st.experimental_rerun()
+            st.rerun()
         if st.button('SOS (Morse)'):
             input_area = '... --- ...'
-            st.experimental_rerun()
+            st.rerun()
         if st.button('Complex (Text)'):
             input_area = 'Streamlit is fun!'
-            st.experimental_rerun()
+            st.rerun()
 
     st.markdown('### Actions')
     cols = st.columns(3)
@@ -170,8 +170,8 @@ with left:
         do_clear = st.button('Clear')
 
     if do_clear:
-        st.experimental_set_query_params()  # no-op to give some immediate effect
-        st.experimental_rerun()
+        st.set_query_params()  # no-op to give some immediate effect
+        st.rerun()
 
 with right:
     st.markdown('### Output')
@@ -255,12 +255,12 @@ with cols[0]:
             with btn_col1:
                 if st.button(f'Load {i}', key=f'load_{i}'):
                     # load back into the input (approximate)
-                    st.experimental_set_query_params()
-                    st.experimental_rerun()
+                    st.set_query_params()
+                    st.rerun()
             with btn_col2:
                 if st.button(f'Delete {i}', key=f'del_{i}'):
                     st.session_state.history.pop(len(st.session_state.history)-1-i)
-                    st.experimental_rerun()
+                    st.rerun()
     else:
         st.info('No history yet — convert something to fill this list!')
 
@@ -294,3 +294,4 @@ try:
     st.caption(f'Running from: {app_path}')
 except Exception:
     pass
+
