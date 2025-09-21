@@ -170,7 +170,7 @@ with left:
         do_clear = st.button('Clear')
 
     if do_clear:
-        st.set_query_params()  # no-op to give some immediate effect
+        st.experimental_set_query_params()  # no-op to give some immediate effect
         st.rerun()
 
 with right:
@@ -255,7 +255,7 @@ with cols[0]:
             with btn_col1:
                 if st.button(f'Load {i}', key=f'load_{i}'):
                     # load back into the input (approximate)
-                    st.set_query_params()
+                    st.experimental_set_query_params()
                     st.rerun()
             with btn_col2:
                 if st.button(f'Delete {i}', key=f'del_{i}'):
